@@ -14,7 +14,8 @@ import java.util.Map;
  *
  */
 
-public class CharacterClass {
+public abstract class CharacterClass {
+
     private String name;
     private String originBook;
     private boolean spellcaster;

@@ -4,10 +4,15 @@ import com.company.BaseClasses.AbilityScores;
 import com.company.BaseClasses.CharacterClass;
 import com.company.Enums.Proficiencies;
 
+import java.util.List;
+
 public class Fighter extends CharacterClass {
-    public Fighter() {
-        super("Fighter", "Player's Handbook", false, List<Proficiencies>(Proficiencies.proficiency.ATHLETICS, Proficiencies.proficiency.ACROBATICS));
 
+    public Fighter(String name, String originBook, boolean isSpellcaster, List<Proficiencies> classProficiencies, AbilityScores abilityScores) {
+        super("Fighter", "Players Handbook", false, classProficiencies, abilityScores);
 
+        Proficiencies FighterProficiencies = new Proficiencies();
     }
+
+
 }
