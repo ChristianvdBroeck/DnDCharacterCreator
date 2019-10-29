@@ -16,58 +16,67 @@ import java.util.Map;
 
 public abstract class CharacterClass {
 
-    private String name;
-    private String originBook;
-    private boolean spellcaster;
-    private AbilityScores abilityScores;
+    // fields:
+    private int numHitDice;
+    private String hitDice;
+    private int proficiencyBonus;
+    private String[] savingThrows;
+    private String[] skills;
+    private String[] features;
+    private String[] proficiencies;
+    private String[] firstEquipmentChoice;
+    private String[] secondEquipmentChoice;
+    private String[] guaranteedEquipment;
 
-    // Add when appropriate objects are created
-    private List<Proficiencies> classProficiencies;
+    // constructor:
+    public CharacterClass()
+    {
 
-    public CharacterClass(String name, String originBook, boolean isSpellcaster, List<Proficiencies> classProficiencies, AbilityScores abilityScores/*, Map.Entry<AvilityScore, int> bonus,*/) {
-        this.name = name;
-        this.originBook = originBook;
-        this.classProficiencies = classProficiencies;
-//        this.bonus = bonus;
-        this.spellcaster = isSpellcaster;
-        this.abilityScores = abilityScores;
     }
 
-
-
-    public String getName() {
-        return name;
+    // getters:
+    public int getNumHitDice() {
+        return numHitDice;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getHitDice() {
+        return hitDice;
     }
 
-    public String getOriginBook() {
-        return originBook;
+    public int getHitPoints(int constitution) {
+        int hitDie = Integer.parseInt(getHitDice().substring(1, 2));
+        return hitDie + constitution;
     }
 
-    public void setOriginBook(String originBook) {
-        this.originBook = originBook;
+    public int getProficiencyBonus() {
+        return proficiencyBonus;
     }
 
-    public boolean isSpellcaster() {
-        return spellcaster;
+    public String[] getSavingThrows() {
+        return savingThrows;
     }
 
-    public void setSpellcaster(boolean spellcaster) {
-        spellcaster = spellcaster;
+    public String[] getSkills() {
+        return skills;
     }
 
-    public List<Proficiencies> getClassProficiencies() {
-        return classProficiencies;
+    public String[] getFeatures() {
+        return features;
     }
-//
-//    public void setClassProficiencies(List<Proficiency> classProficiencies) {
-//        this.classProficiencies = classProficiencies;
-//    }
-//
-//    public void setBonus(Map.Entry<AvilityScore, int> bonus) {
-//        this.bonus = bonus;
-//    }
+
+    public String[] getProficiencies() {
+        return proficiencies;
+    }
+
+    public String[] getFirstEquipmentChoice() {
+        return firstEquipmentChoice;
+    }
+
+    public String[] getSecondEquipmentChoice() {
+        return secondEquipmentChoice;
+    }
+
+    public String[] getGuaranteedEquipment() {
+        return guaranteedEquipment;
+    }
 }
