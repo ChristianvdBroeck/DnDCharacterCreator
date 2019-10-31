@@ -17,7 +17,7 @@ public abstract class CharacterClass {
     private String hitDice;
     private int proficiencyBonus;
     private String[] savingThrows;
-    private String[] skills;
+    private String[] skillsChoice;
     private String[] features;
     private String[] proficiencies;
     private String[] firstEquipmentChoice;
@@ -52,8 +52,8 @@ public abstract class CharacterClass {
         return savingThrows;
     }
 
-    public String[] getSkills() {
-        return skills;
+    public String[] getSkillsChoice() {
+        return skillsChoice;
     }
 
     public String[] getFeatures() {
@@ -83,12 +83,54 @@ public abstract class CharacterClass {
         features.add(String.valueOf(getHitPoints(constitution)));
         features.add(String.valueOf(getProficiencyBonus()));
         features.add(Arrays.toString(getSavingThrows()));
-        features.add(Arrays.toString(getSkills()));
+        features.add(Arrays.toString(getSkillsChoice()));
         features.add(Arrays.toString(getFeatures()));
         features.add(Arrays.toString(getFirstEquipmentChoice()));
         features.add(Arrays.toString(getSecondEquipmentChoice()));
         features.add(Arrays.toString(getGuaranteedEquipment()));
 
         return features;
+    }
+
+    // setters:
+
+    public void setNumHitDice(int numHitDice) {
+        this.numHitDice = numHitDice;
+    }
+
+    public void setHitDice(String hitDice) {
+        this.hitDice = hitDice;
+    }
+
+    public void setProficiencyBonus(int proficiencyBonus) {
+        this.proficiencyBonus = proficiencyBonus;
+    }
+
+    public void setSavingThrows(String[] savingThrows) {
+        this.savingThrows = savingThrows;
+    }
+
+    public void setSkillsChoice(String[] skills) {
+        this.skillsChoice = skills;
+    }
+
+    public void setFeatures(String[] features) {
+        this.features = features;
+    }
+
+    public void setProficiencies(String[] proficiencies) {
+        this.proficiencies = proficiencies;
+    }
+
+    public void setFirstEquipmentChoice(String[] firstEquipmentChoice) {
+        this.firstEquipmentChoice = firstEquipmentChoice;
+    }
+
+    public void setSecondEquipmentChoice(String[] secondEquipmentChoice) {
+        this.secondEquipmentChoice = secondEquipmentChoice;
+    }
+
+    public void setGuaranteedEquipment(String[] guaranteedEquipment) {
+        this.guaranteedEquipment = guaranteedEquipment;
     }
 }
