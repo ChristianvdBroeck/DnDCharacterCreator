@@ -1,37 +1,52 @@
 package com.company.BaseClasses;
 
 import com.company.Enums.Proficiencies;
-
 import java.util.Map;
+
+/*
+ * Created by Christian van den Broeck on 02/10/2019
+ * ===
+ * This base class describes a character's class. All specific classes will inherit from this base class.
+ *
+ */
 
 public abstract class CharacterRace {
 
-    private String name;
-    private Map<Proficiencies.proficiency, Integer> proficiencies;
-    private Map<String, String> racialFeatures;
+    /*
+     * set-up a little different than the example:
+     * the example uses variables in the constructor.
+     * Namely a name and all the ability scores (and bonusses).
+     * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     */
+
+
+    // fields:
+    private int speed;
+    private String size;
+    private String[] languages;
+    private String[] racialAbilities;
 //    private String subrace; // mss een enum? Deze moet ook toegevoegd worden aan de individuele races.
 
-    public CharacterRace(String name) {
-        this.name = name;
+
+    // constructor:
+    public CharacterRace() {
+
     }
 
-    public String getName() {
-        return name;
+    // getters:
+    public int getSpeed() {
+        return speed;
     }
 
-    public Map<Proficiencies.proficiency, Integer> getProficiencies() {
-        return proficiencies;
+    public String getSize() {
+        return size;
     }
 
-    public void setProficiencies(Map<Proficiencies.proficiency, Integer> proficiencies) {
-        this.proficiencies = proficiencies;
+    public String[] getLanguages() {
+        return languages;
     }
 
-    public Map<String, String> getRacialFeatures() {
-        return racialFeatures;
-    }
-
-    public void setRacialFeatures(Map<String, String> racialFeatures) {
-        this.racialFeatures = racialFeatures;
+    public String[] getRacialAbilities() {
+        return racialAbilities;
     }
 }

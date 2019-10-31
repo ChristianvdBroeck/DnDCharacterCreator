@@ -1,18 +1,14 @@
 package com.company.BaseClasses;
 
-import com.company.Enums.Proficiencies;
-
-import java.util.AbstractMap;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 /*
  * Created by Christian van den Broeck on 02/10/2019
  * ===
  * This base class describes a character's class. All specific classes will inherit from this base class.
  *
  */
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public abstract class CharacterClass {
 
@@ -78,5 +74,21 @@ public abstract class CharacterClass {
 
     public String[] getGuaranteedEquipment() {
         return guaranteedEquipment;
+    }
+
+    public ArrayList<String> getAllFeatures(int constitution) {
+        ArrayList<String> features = new ArrayList<>();
+        features.add(String.valueOf(getNumHitDice()));
+        features.add(getHitDice());
+        features.add(String.valueOf(getHitPoints(constitution)));
+        features.add(String.valueOf(getProficiencyBonus()));
+        features.add(Arrays.toString(getSavingThrows()));
+        features.add(Arrays.toString(getSkills()));
+        features.add(Arrays.toString(getFeatures()));
+        features.add(Arrays.toString(getFirstEquipmentChoice()));
+        features.add(Arrays.toString(getSecondEquipmentChoice()));
+        features.add(Arrays.toString(getGuaranteedEquipment()));
+
+        return features;
     }
 }
