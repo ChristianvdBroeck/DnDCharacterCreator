@@ -22,7 +22,7 @@ public class Barbarian extends CharacterClass {
     private String [] guaranteedEquipment = {"Explorer's Pack", "Four Javelins"};
 
     private int proficiencyBonus = 2;
-    private int numHitDice =1;         // both rely on level
+    private int numHitDice = 1;         // both rely on level
 
     // constructor:
     public Barbarian() {

@@ -22,6 +22,8 @@ public abstract class CharacterClass {
     private String[] proficiencies;
     private String[] firstEquipmentChoice;
     private String[] secondEquipmentChoice;
+    private String[] thirdEquipmentChoice;
+    private String[] fourthEquipmentChoice;
     private String[] guaranteedEquipment;
 
     // constructor:
@@ -76,6 +78,14 @@ public abstract class CharacterClass {
         return guaranteedEquipment;
     }
 
+    public String[] getThirdEquipmentChoice() {
+        return thirdEquipmentChoice;
+    }
+
+    public String[] getFourthEquipmentChoice() {
+        return fourthEquipmentChoice;
+    }
+
     public ArrayList<String> getAllFeatures(int constitution) {
         ArrayList<String> features = new ArrayList<>();
         features.add(String.valueOf(getNumHitDice()));
@@ -87,6 +97,8 @@ public abstract class CharacterClass {
         features.add(Arrays.toString(getFeatures()));
         features.add(Arrays.toString(getFirstEquipmentChoice()));
         features.add(Arrays.toString(getSecondEquipmentChoice()));
+        features.add(Arrays.toString(getThirdEquipmentChoice()));
+        features.add(Arrays.toString(getFourthEquipmentChoice()));
         features.add(Arrays.toString(getGuaranteedEquipment()));
 
         return features;
