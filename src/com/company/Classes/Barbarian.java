@@ -16,7 +16,7 @@ public class Barbarian extends CharacterClass {
     private String[] savingThrows = {"Strength", "Constitution"};
     private String[] skillsChoice = {"Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"};
     private String[] features = {"Rage", "Unarmored Defense"};
-    private String[] proficiencies = {"Light Armor", "Medium Armor", "Shields", "Simple Weapons", "Martial Weapons"};
+    private String[] weaponProficiencies = {"Light Armor", "Medium Armor", "Shields", "Simple Weapons", "Martial Weapons"};
     private String[] firstEquipmentChoice = {"Greataxe", "Martial Melee Weapon"};
     private String[] secondEquipmentChoice = {"Two Handaxes", "Any Simple Weapon"};
     private String [] guaranteedEquipment = {"Explorer's Pack", "Four Javelins"};
@@ -34,7 +34,7 @@ public class Barbarian extends CharacterClass {
         super.setSavingThrows(this.savingThrows);
         super.setSkillsChoice(this.skillsChoice);
         super.setFeatures(this.features);
-        super.setProficiencies(this.proficiencies);
+        super.setWeaponProficiencies(this.weaponProficiencies);
         super.setFirstEquipmentChoice(this.firstEquipmentChoice);
         super.setSecondEquipmentChoice(this.secondEquipmentChoice);
         super.setGuaranteedEquipment(this.guaranteedEquipment);
@@ -63,8 +63,8 @@ public class Barbarian extends CharacterClass {
     }
 
     @Override
-    public String[] getProficiencies() {
-        return this.proficiencies;
+    public String[] getWeaponProficiencies() {
+        return this.weaponProficiencies;
     }
 
     @Override

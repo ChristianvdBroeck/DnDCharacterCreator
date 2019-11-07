@@ -19,7 +19,7 @@ public abstract class CharacterClass {
     private String[] savingThrows;
     private String[] skillsChoice;
     private String[] features;
-    private String[] proficiencies;
+    private String[] weaponProficiencies;
     private String[] firstEquipmentChoice;
     private String[] secondEquipmentChoice;
     private String[] thirdEquipmentChoice;
@@ -62,8 +62,8 @@ public abstract class CharacterClass {
         return features;
     }
 
-    public String[] getProficiencies() {
-        return proficiencies;
+    public String[] getWeaponProficiencies() {
+        return weaponProficiencies;
     }
 
     public String[] getFirstEquipmentChoice() {
@@ -100,6 +100,7 @@ public abstract class CharacterClass {
         features.add(Arrays.toString(getThirdEquipmentChoice()));
         features.add(Arrays.toString(getFourthEquipmentChoice()));
         features.add(Arrays.toString(getGuaranteedEquipment()));
+        features.add(Arrays.toString(getWeaponProficiencies()));
 
         return features;
     }
@@ -130,8 +131,8 @@ public abstract class CharacterClass {
         this.features = features;
     }
 
-    public void setProficiencies(String[] proficiencies) {
-        this.proficiencies = proficiencies;
+    public void setWeaponProficiencies(String[] weaponProficiencies) {
+        this.weaponProficiencies = weaponProficiencies;
     }
 
     public void setFirstEquipmentChoice(String[] firstEquipmentChoice) {
@@ -140,6 +141,14 @@ public abstract class CharacterClass {
 
     public void setSecondEquipmentChoice(String[] secondEquipmentChoice) {
         this.secondEquipmentChoice = secondEquipmentChoice;
+    }
+
+    public void setThirdEquipmentChoice(String[] thirdEquipmentChoice) {
+        this.thirdEquipmentChoice = thirdEquipmentChoice;
+    }
+
+    public void setFourthEquipmentChoice(String[] fourthEquipmentChoice) {
+        this.fourthEquipmentChoice = fourthEquipmentChoice;
     }
 
     public void setGuaranteedEquipment(String[] guaranteedEquipment) {

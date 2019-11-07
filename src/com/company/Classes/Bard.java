@@ -36,7 +36,7 @@ public class Bard extends CharacterClass {
         super.setSavingThrows(this.savingThrows);
         super.setSkillsChoice(this.skillsChoice);
         super.setFeatures(this.features);
-        super.setProficiencies(this.proficiencies);
+        super.setWeaponProficiencies(this.proficiencies);
         super.setFirstEquipmentChoice(this.firstEquipmentChoice);
         super.setSecondEquipmentChoice(this.secondEquipmentChoice);
         super.setGuaranteedEquipment(this.guaranteedEquipment);
@@ -65,7 +65,7 @@ public class Bard extends CharacterClass {
     }
 
     @Override
-    public String[] getProficiencies() {
+    public String[] getWeaponProficiencies() {
         return this.proficiencies;
     }
 

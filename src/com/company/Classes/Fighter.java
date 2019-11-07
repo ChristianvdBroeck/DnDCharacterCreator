@@ -1,8 +1,6 @@
 package com.company.Classes;
 
-import com.company.BaseClasses.AbilityScores;
 import com.company.BaseClasses.CharacterClass;
-import com.company.Enums.Proficiencies;
 
 /*
  * Created by Christian van den Broeck on 06/11/2019
@@ -10,8 +8,6 @@ import com.company.Enums.Proficiencies;
  * THE FIGHTER CLASS
  *
  */
-
-import java.util.List;
 
 public class Fighter extends CharacterClass {
 
@@ -41,7 +37,7 @@ public class Fighter extends CharacterClass {
         super.setSavingThrows(this.savingThrows);
         super.setSkillsChoice(this.skillsChoice);
         super.setFeatures(this.features);
-        super.setProficiencies(this.proficiencies);
+        super.setWeaponProficiencies(this.proficiencies);
         super.setFirstEquipmentChoice(this.firstEquipmentChoice);
         super.setSecondEquipmentChoice(this.secondEquipmentChoice);
         super.setSecondEquipmentChoice(this.thirdEquipmentChoice);
@@ -71,7 +67,7 @@ public class Fighter extends CharacterClass {
     }
 
     @Override
-    public String[] getProficiencies() {
+    public String[] getWeaponProficiencies() {
         return proficiencies;
     }
 
