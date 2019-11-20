@@ -4,7 +4,7 @@ import com.company.BaseClasses.CharacterRace;
 
 public class HalfElf extends CharacterRace {
 
-    public HalfElf() {
-        super("Half-Elf");
-    }
+//    public HalfElf() {
+//        super("Half-Elf");
+//    }
 }

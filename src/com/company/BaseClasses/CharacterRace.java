@@ -1,6 +1,8 @@
 package com.company.BaseClasses;
 
 import com.company.Enums.Proficiencies;
+
+import java.util.HashMap;
 import java.util.Map;
 
 /*
@@ -21,6 +23,7 @@ public abstract class CharacterRace {
 
 
     // fields:
+    private Map<String, Integer> abilityScoreIncrease;
     private int speed;
     private String size;
     private String[] languages;
@@ -48,5 +51,30 @@ public abstract class CharacterRace {
 
     public String[] getRacialAbilities() {
         return racialAbilities;
+    }
+
+    public Map<String, Integer> getAbilityScoreIncrease() {
+        return abilityScoreIncrease;
+    }
+
+    // setters;
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public void setLanguages(String[] languages) {
+        this.languages = languages;
+    }
+
+    public void setRacialAbilities(String[] racialAbilities) {
+        this.racialAbilities = racialAbilities;
+    }
+
+    public void setAbilityScoreIncrease(Map<String, Integer> abilityScoreIncrease) {
+        this.abilityScoreIncrease = abilityScoreIncrease;
     }
 }

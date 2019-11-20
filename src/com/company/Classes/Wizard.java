@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Wizard extends CharacterClass {
 
-    public Wizard(String name, String originBook, boolean isSpellcaster, List<Proficiencies> classProficiencies, AbilityScores abilityScores) {
-        super(name, originBook, isSpellcaster, classProficiencies, abilityScores);
-    }
+//    public Wizard(String name, String originBook, boolean isSpellcaster, List<Proficiencies> classProficiencies, AbilityScores abilityScores) {
+//        super(name, originBook, isSpellcaster, classProficiencies, abilityScores);
+//    }
 }
