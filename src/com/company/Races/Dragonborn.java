@@ -5,6 +5,13 @@ import com.company.BaseClasses.CharacterRace;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ * Created by Christian van den Broeck on 03/12/2019
+ * ===
+ * THE DRAGONBORN RACE
+ *
+ */
+
 public class Dragonborn extends CharacterRace {
 
     // fields

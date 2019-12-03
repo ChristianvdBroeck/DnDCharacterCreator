@@ -6,22 +6,22 @@ import java.util.Map;
 /*
  * Created by Christian van den Broeck on 03/12/2019
  * ===
- * THE DWARF RACE
+ * THE HALFLING RACE
  *
  */
 
-public class Dwarf extends CharacterRace {
+public class Halfling extends CharacterRace {
 
     // fields
-    private Map<String, Integer> abilityScoreIncrease = Map.of("Constitution", 2);
+    private Map<String, Integer> abilityScoreIncrease = Map.of("Dexterity", 2);
     private int speed = 25;
-    private String size = "Between 4 and 5 feet";
-    private String[] racialAbilities = { "Darkvision", "Dwarven Religion", "Dwarven Combat Training", "Stonecunning" };
-    private String[] languages = { "Common", "Dwarvish" };
+    private String size = "3feet";
+    private String[] racialAbilities = { "Lucky", "Brave", "Halfling Nimbleness" };
+    private String[] languages = { "Common", "Halfling" };
     // tool proficiencies
 
     // constructor:
-    public Dwarf() {
+    public Halfling() {
         super();
 
         this.setAbilityScoreIncrease(this.abilityScoreIncrease);

@@ -6,22 +6,22 @@ import java.util.Map;
 /*
  * Created by Christian van den Broeck on 03/12/2019
  * ===
- * THE DWARF RACE
+ * THE ELF RACE
  *
  */
 
-public class Dwarf extends CharacterRace {
+public class Elf extends CharacterRace {
 
     // fields
-    private Map<String, Integer> abilityScoreIncrease = Map.of("Constitution", 2);
-    private int speed = 25;
-    private String size = "Between 4 and 5 feet";
-    private String[] racialAbilities = { "Darkvision", "Dwarven Religion", "Dwarven Combat Training", "Stonecunning" };
-    private String[] languages = { "Common", "Dwarvish" };
+    private Map<String, Integer> abilityScoreIncrease = Map.of("Dexterity", 2);
+    private int speed = 30;
+    private String size = "Between 5 and 6 feet";
+    private String[] racialAbilities = { "Darkvision", "Fey Ancestry", "Trance" };
+    private String[] languages = { "Common", "Elvish", "One of Your Choice" };
     // tool proficiencies
 
     // constructor:
-    public Dwarf() {
+    public Elf() {
         super();
 
         this.setAbilityScoreIncrease(this.abilityScoreIncrease);
@@ -31,27 +31,22 @@ public class Dwarf extends CharacterRace {
         this.setRacialAbilities(this.racialAbilities);
     }
 
-    @Override
     public Map<String, Integer> getAbilityScoreIncrease() {
         return abilityScoreIncrease;
     }
 
-    @Override
     public int getSpeed() {
         return speed;
     }
 
-    @Override
     public String getSize() {
         return size;
     }
 
-    @Override
     public String[] getRacialAbilities() {
         return racialAbilities;
     }
 
-    @Override
     public String[] getLanguages() {
         return languages;
     }
